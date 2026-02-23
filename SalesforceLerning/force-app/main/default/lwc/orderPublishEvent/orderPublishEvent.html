@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Order Event Monitor" icon-name="custom:custom63">
+        <div class="slds-p-around_medium">
+            <template if:true={latestOrder}>
+                <div class="slds-box slds-theme_shade">
+                    <h3 class="slds-text-heading_small">Latest Order</h3>
+                    <dl class="slds-m-top_small">
+                        <dt class="slds-text-title">Order ID:</dt>
+                        <dd class="slds-text-body_regular">{latestOrder.id}</dd>
+                        <dt class="slds-text-title slds-m-top_small">Status:</dt>
+                        <dd class="slds-text-body_regular">{latestOrder.status}</dd>
+                        <dt class="slds-text-title slds-m-top_small">Amount:</dt>
+                        <dd class="slds-text-body_regular">${latestOrder.amount}</dd>
+                    </dl>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

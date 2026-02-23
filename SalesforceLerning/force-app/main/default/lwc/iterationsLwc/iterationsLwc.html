@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="List of Employees">
+        <ul>
+            <template for:each ={contacts} for:item="contact">
+                <li key={contact.Id}>
+                    Name: {contact.Name} Role: {contact.Role}
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+
+    <lightning-card title="List of Fruits">
+        <ul class = "slds-m-around_medium slds-p-around_medium"> 
+            <template for:each ={Fruits} for:item="fruit">
+                <li key={fruit.Id}>
+                    Name: {fruit.Name} Price: {fruit.Price}
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+
+   
+</template>
