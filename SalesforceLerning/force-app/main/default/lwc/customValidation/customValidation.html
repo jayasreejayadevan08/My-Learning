@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Form Validation">
+        <lightning-input type="text" label="First Name" pattern="[a-zA-Z]+" required
+        message-when-value-missing = "Please Fill This Field"></lightning-input>
+        <lightning-input type="number" label="Amount"></lightning-input>
+        <lightning-input type="number" label="Percentage" min="0" max="100" message-when-range-overflow = "Please Enter a value between 0 and 100"
+        message-when-range-underflow = "Please Enter a positive value between 0 and 100"></lightning-input>
+        <lightning-input type="password" label="Password" placeholder="***"></lightning-input>
+        <lightning-input type="email" label="Email"></lightning-input>
+        <lightning-input type="tel" label="Phone"></lightning-input>
+        <lightning-input type="datetime" name="input1" label="Enter a date/time value" ></lightning-input>
+    </lightning-card>
+    
+</template>

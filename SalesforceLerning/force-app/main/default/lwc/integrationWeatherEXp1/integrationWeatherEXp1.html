@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title = "Weather">
+        <lightning-input type="text" label="Enter City" value={city} onchange={handleChange}></lightning-input>
+        <lightning-button label="Get Weather" variant="brand" onclick={getWeatherData}></lightning-button>
+        <template if:true={weather} > 
+
+            <p class="slds-text-heading_small">City: {weather.city}</p>
+            <p class="slds-text-heading_small">Temprature: {weather.temp}</p>
+            <p class="slds-text-heading_small">feelsLike: {weather.feelsLike}</p>
+            <p class="slds-text-heading_small">Description: {weather.description}</p>
+            <p class="slds-text-heading_small">WindSpeed: {weather.windSpeed}</p>
+
+        </template>
+        
+        <template if:true= {error}>
+            <p class="slds-text-heading_small">{error}</p>
+        </template>    
+    </lightning-card>
+    
+</template>

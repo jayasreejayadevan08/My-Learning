@@ -1,0 +1,25 @@
+<template>
+
+     <lightning-card title = "Fuel">
+        <lightning-input type="text" label="Enter State" value={state} onchange={handleStateChange}></lightning-input>
+        <lightning-input type="text" label="Enter City" value={city} onchange={handleCityChange}></lightning-input>
+        <lightning-button label="Get Fuel Price" variant="brand" onclick={getFuelpriceData}></lightning-button>
+        <template if:true={details} > 
+
+            <p class="slds-text-heading_small">City: {details.city}</p>
+            <p class="slds-text-heading_small">State: {details.state}</p>
+            <p class="slds-text-heading_small">Date: {details.date}</p>
+            <p class="slds-text-heading_small">Date: {details.petrol}</p>
+            <p class="slds-text-heading_small">Date: {details.diesel}</p>
+            <p class="slds-text-heading_small">Date: {details.cng}</p>
+            <p class="slds-text-heading_small">Date: {details.lpg}</p>
+            
+
+        </template>
+        
+        <template if:true= {error}>
+            <p class="slds-text-heading_small">{error}</p>
+        </template>    
+    </lightning-card>
+    
+</template>

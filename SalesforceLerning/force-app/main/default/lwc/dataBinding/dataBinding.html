@@ -1,0 +1,16 @@
+<template>
+            <lightning-card title ='Data Binding'> 
+                <p> {data} </p>
+                
+            </lightning-card>
+            <lightning-card title="One way Data Binding HTML to JS">
+            <lightning-input type="text" label="Enter your message" onchange={handleChange}></lightning-input>
+        </lightning-card>
+        <p>{msg}</p>   
+        <lightning-card title="Button Click">
+        <button onclick={updateMessage}>Click to Change Message</button>
+    </lightning-card>
+    <p>{message}</p>
+
+        
+    </template>
